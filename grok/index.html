@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Grok</title>
+  </head>
+
+  <body>
+    <section class="section grok">
+      <div class="container-fluid sidebar">
+        <div class="row logo">
+          <div class="col rc-11">
+            <img src="./images/grok.png" alt="grok-logo" />
+          </div>
+        </div>
+
+        <div class="row search">
+          <div class="col rc-21">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder="Search Ctrl+K" />
+          </div>
+        </div>
+
+        <div class="row options">
+          <div class="col rc-31">
+            <div class="ask">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <h4>Ask</h4>
+              <span style="">Ctrl+J</span>
+            </div>
+            <div>
+              <i
+                class="fa fa-angle-right"
+                aria-hidden="true"
+                style="display: none"
+              ></i>
+              <i class="fa fa-history" aria-hidden="true"></i>
+              <h4>History</h4>
+            </div>
+          </div>
+
+          <div class="row closure">
+            <div class="col rc-41">
+              <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="container main-content">
+          <div class="row main-row">
+
+            <div class="col rc-02">
+              <div class="query">
+                <span> Hello </span>
+              </div>
+
+              <div class="resp-bar">
+                <p>
+                  Yo, what's good? Ready to dive into whatever you're pondering
+                  about today? 😎
+                </p>
+
+                <div class="icon-bar">
+                  <i class="fa fa-refresh"></i>
+                  <i class="fa fa-volume-up"></i>
+                  <i class="fa fa-comment-o"></i>
+                  <i class="fa fa-external-link"></i>
+                  <i class="fa fa-thumbs-up"></i>
+                  <i class="fa fa-thumbs-down"></i>
+                  <i class="fa fa-ellipsis-h"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col rc-12">
+              <img src="./images/grok.png" alt="grok-logo" />
+              <img
+                class="logo-text"
+                src="./images/grok-text.png"
+                alt="grok-text"
+              />
+            </div>
+
+            <div class="col rc-22">
+              <!-- Plus Dropdown  -->
+              <div class="plus dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Deep Search</a></li>
+                <li><a class="dropdown-item" href="#">Think Longer</a></li>
+                <li><a class="dropdown-item" href="#">Study & Learn</a></li>
+                <li><a class="dropdown-item" href="#">Add Media</a></li>
+              </ul>
+
+              <input type="text" placeholder="What do you want to know?" />
+
+              <!-- Model Dropdown  -->
+              <span class="model dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fa fa-modx" aria-hidden="true"></i>
+                Model
+              </span>
+              <ul class="dropdown-menu model-dropdown">
+                <li><a class="dropdown-item" href="#">GPT-4</a></li>
+                <li><a class="dropdown-item" href="#">GPT-3.5</a></li>
+                <li><a class="dropdown-item" href="#">GPT-mini</a></li>
+                <li><a class="dropdown-item" href="#">Claude</a></li>
+                <li><a class="dropdown-item" href="#">Gemini</a></li>
+                <li><a class="dropdown-item" href="#">Deepseek</a></li>
+              </ul>
+            </div>
+
+            <div class="col rc-32">
+              <div class="create-image">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <span>Create Image</span>
+              </div>
+
+              <div class="latest-news">
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <span>Latest News</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section resp">
+      <div class="container resp-cont">
+        <div class="row resp-row">
+          <div class="col">
+            <div id="text" class="text">
+              <span class="">
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

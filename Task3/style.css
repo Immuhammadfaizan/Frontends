@@ -1,0 +1,32 @@
+ /* header */
+ header{
+    background: lightgray;
+    padding: 20px;
+ }
+
+ section{
+    padding: 20px;
+ }
+
+ footer{
+    background: lightgray;
+    padding: 20px;
+ }
+
+ .container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0px auto;
+ }
+ .row{
+    display: flex;
+ }
+.cols-1{
+    flex-grow: 1;
+}
+.cols-2{
+  flex-grow: 2;
+}
+.cols-3{
+  flex-grow: 3;
+}

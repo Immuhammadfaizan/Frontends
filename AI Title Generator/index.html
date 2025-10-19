@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Title Generator</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #f5f5dc;
+            min-height: 100%;
+            line-height: 1.6;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #f5f5dc, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .form-container {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            padding: 2.0rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(245, 245, 220, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #f5f5dc;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid rgba(245, 245, 220, 0.2);
+            border-radius: 8px;
+            background: rgba(26, 26, 46, 0.6);
+            color: #f5f5dc;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+            color: #f5f5dc;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .generate-btn:hover {
+            background: linear-gradient(45deg, #1e40af, #2563eb);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .generate-btn:active {
+            transform: translateY(0);
+        }
+
+        .generate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(245, 245, 220, 0.3);
+            border-top: 2px solid #f5f5dc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result-container {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(245, 245, 220, 0.1);
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-header h3 {
+            margin: 0;
+            color: #d4af37;
+            font-size: 1.3rem;
+        }
+
+        .success-icon {
+            color: #10b981;
+            font-size: 1.5rem;
+        }
+
+        .generated-title {
+            background: rgba(26, 26, 46, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .generated-title h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+            color: #f5f5dc;
+            line-height: 1.4;
+        }
+
+        .title-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(59, 130, 246, 0.2);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .copy-btn {
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .title-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Title Generator</h1>
+            <p>Generate SEO-optimized titles that rank and convert</p>
+        </div>
+
+        <div class="form-container">
+            <form id="titleForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select Category</option>
+                            <option value="technology">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="health">Health & Wellness</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="education">Education</option>
+                            <option value="finance">Finance</option>
+                            <option value="travel">Travel</option>
+                            <option value="food">Food & Cooking</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="niche">Niche</label>
+                        <input type="text" id="niche" placeholder="e.g., AI tools, productivity apps" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="audience">Target Audience</label>
+                        <select id="audience" required>
+                            <option value="">Select Audience</option>
+                            <option value="beginners">Beginners</option>
+                            <option value="professionals">Professionals</option>
+                            <option value="entrepreneurs">Entrepreneurs</option>
+                            <option value="students">Students</option>
+                            <option value="general">General Public</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contentType">Content Type</label>
+                        <select id="contentType" required>
+                            <option value="">Select Type</option>
+                            <option value="blog-post">Blog Post</option>
+                            <option value="article">Article</option>
+                            <option value="guide">How-to Guide</option>
+                            <option value="review">Review</option>
+                            <option value="listicle">Listicle</option>
+                            <option value="tutorial">Tutorial</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keywords">Primary Keywords</label>
+                    <input type="text" id="keywords" placeholder="Enter main keywords (comma separated)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Brief Description (Optional)</label>
+                    <textarea id="description" placeholder="Describe what your content is about..."></textarea>
+                </div>
+
+                <button type="submit" class="generate-btn" id="generateBtn">
+                    <span class="btn-text">Generate SEO Title</span>
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <span>Generating...</span>
+                    </div>
+                </button>
+            </form>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <span class="success-icon">✨</span>
+                <h3>Generated SEO Title</h3>
+            </div>
+            <div class="generated-title">
+                <h4 id="generatedTitle"></h4>
+                <div class="title-meta">
+                    <span class="meta-item" id="charCount"></span>
+                    <span class="meta-item" id="wordCount"></span>
+                    <span class="meta-item">SEO Optimized</span>
+                </div>
+            </div>
+            <button class="copy-btn" id="copyBtn">📋 Copy Title</button>
+        </div>
+    </div>
+
+    <script>
+        const titleTemplates = {
+            'blog-post': [
+                'The Ultimate Guide to {keywords} for {audience} in 2024',
+                'How {keywords} Can Transform Your {niche} Strategy',
+                '{keywords}: Everything {audience} Need to Know',
+                'Master {keywords} in {niche} - Complete {audience} Guide',
+                'Why {keywords} is Essential for {niche} Success'
+            ],
+            'article': [
+                '{keywords} Trends That Will Shape {niche} in 2024',
+                'The Science Behind {keywords} in {niche}',
+                '{keywords} vs Traditional Methods: A {niche} Analysis',
+                'Breaking Down {keywords}: A {audience} Perspective',
+                'The Future of {keywords} in {niche} Industry'
+            ],
+            'guide': [
+                'Step-by-Step Guide to {keywords} for {audience}',
+                'How to Master {keywords} in {niche} - Beginner to Pro',
+                'Complete {keywords} Tutorial for {audience}',
+                '{keywords} Made Simple: A {audience} Guide',
+                'Learn {keywords} in {niche} - The Easy Way'
+            ],
+            'review': [
+                '{keywords} Review: Is It Worth It for {audience}?',
+                'Honest {keywords} Review - {niche} Expert Opinion',
+                '{keywords} vs Competitors: Which is Best for {audience}?',
+                'I Tested {keywords} for {niche} - Here\'s What Happened',
+                '{keywords} Review: Pros, Cons, and Everything Between'
+            ],
+            'listicle': [
+                '10 Best {keywords} Tools for {audience} in 2024',
+                '7 {keywords} Strategies That Actually Work in {niche}',
+                'Top 5 {keywords} Mistakes {audience} Make (And How to Fix Them)',
+                '15 {keywords} Tips Every {audience} Should Know',
+                '12 Game-Changing {keywords} Techniques for {niche}'
+            ],
+            'tutorial': [
+                'How to Use {keywords} for {niche} Success',
+                '{keywords} Tutorial: From Zero to Hero for {audience}',
+                'Learn {keywords} in 30 Minutes - {audience} Edition',
+                'Master {keywords} with This Simple {niche} Tutorial',
+                '{keywords} Crash Course for {audience}'
+            ]
+        };
+
+        const powerWords = ['Ultimate', 'Complete', 'Essential', 'Proven', 'Secret', 'Advanced', 'Expert', 'Professional', 'Exclusive', 'Revolutionary'];
+        const yearSuffixes = ['in 2024', 'This Year', 'Right Now'];
+
+        document.getElementById('titleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateTitle();
+        });
+
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const title = document.getElementById('generatedTitle').textContent;
+            navigator.clipboard.writeText(title).then(function() {
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                btn.style.background = 'rgba(16, 185, 129, 0.2)';
+                btn.style.color = '#10b981';
+                btn.style.borderColor = '#10b981';
+                
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = 'rgba(212, 175, 55, 0.2)';
+                    btn.style.color = '#d4af37';
+                    btn.style.borderColor = '#d4af37';
+                }, 2000);
+            });
+        });
+
+        function generateTitle() {
+            const category = document.getElementById('category').value;
+            const niche = document.getElementById('niche').value;
+            const audience = document.getElementById('audience').value;
+            const contentType = document.getElementById('contentType').value;
+            const keywords = document.getElementById('keywords').value;
+            const description = document.getElementById('description').value;
+
+            // Show loading state
+            const generateBtn = document.getElementById('generateBtn');
+            const btnText = generateBtn.querySelector('.btn-text');
+            const loading = document.getElementById('loading');
+            
+            generateBtn.disabled = true;
+            btnText.style.display = 'none';
+            loading.style.display = 'flex';
+
+            // Simulate AI processing time
+            setTimeout(() => {
+                const generatedTitle = createSEOTitle(category, niche, audience, contentType, keywords, description);
+                displayResult(generatedTitle);
+                
+                // Reset button state
+                generateBtn.disabled = false;
+                btnText.style.display = 'inline';
+                loading.style.display = 'none';
+            }, 2000);
+        }
+
+        function createSEOTitle(category, niche, audience, contentType, keywords, description) {
+            const templates = titleTemplates[contentType] || titleTemplates['blog-post'];
+            let template = templates[Math.floor(Math.random() * templates.length)];
+            
+            // Replace placeholders
+            template = template.replace(/{keywords}/g, keywords);
+            template = template.replace(/{niche}/g, niche);
+            template = template.replace(/{audience}/g, audience);
+            template = template.replace(/{category}/g, category);
+            
+            // Add power words occasionally
+            if (Math.random() > 0.7) {
+                const powerWord = powerWords[Math.floor(Math.random() * powerWords.length)];
+                template = template.replace(/^(The |How |Why |What |When |Where )/, `${powerWord} `);
+            }
+            
+            // Ensure proper capitalization
+            template = template.charAt(0).toUpperCase() + template.slice(1);
+            
+            return template;
+        }
+
+        function displayResult(title) {
+            document.getElementById('generatedTitle').textContent = title;
+            document.getElementById('charCount').textContent = `${title.length} characters`;
+            document.getElementById('wordCount').textContent = `${title.split(' ').length} words`;
+            
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.style.display = 'block';
+            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98efb5096316a07f',t:'MTc2MDUzNTQwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

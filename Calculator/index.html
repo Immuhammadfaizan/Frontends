@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 rc-00">
+            <input class="input" type="text" placeholder="0" id="result" />
+
+            <div class="buttons">
+              <button class="operator">+</button>
+              <button class="operator">-</button>
+              <button class="operator">x</button>
+              <button class="operator">÷</button>
+
+              <button class="numbers">7</button>
+              <button class="numbers">8</button>
+              <button class="numbers">9</button>
+
+              <button id="equal" class="equal">=</button>
+
+              <button class="numbers">4</button>
+              <button class="numbers">5</button>
+              <button class="numbers">6</button>
+
+              <button class="numbers">1</button>
+              <button class="numbers">2</button>
+              <button class="numbers">3</button>
+
+              <button class="numbers">0</button>
+              <button class="numbers">.</button>
+              <button id="clear" class="clear">AC</button>
+
+              <button class="back-space">
+                <i class="fas fa-backspace"></i>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        let justEval = false;
+
+        $(".numbers").click(function () {
+          let num = $(this).text();
+          let current = $("#result").val();
+
+          if (justEval) {
+            $("#result").val(num);
+            justEval = false;
+          } else {
+            $("#result").val(current + num);
+          }
+        });
+
+        $(".operator").click(function () {
+          let op = $(this).text();
+          let current = $("#result").val();
+          $("#result").val(current + " " + op + " ");
+          justEval = false;
+        });
+
+        $("#equal").click(function () {
+          let expression = $("#result").val();
+          expression = expression.replace(/x/g, "*").replace(/÷/g, "/");
+          try {
+            let result = eval(expression);
+            $("#result").val(result);
+            justEval = true;
+          } catch (e) {
+            $("#result").val("Error");
+            justEval = true;
+          }
+        });
+
+        $("#clear").click(function () {
+          $("#result").val("");
+          justEval = false;
+        });
+
+        $('.back-space').on('click', function () {
+          let curr = $('#result').val();
+          $('#result').val(curr.slice(0, -1));
+          justEval = false;
+        });
+      });
+    </script>
+  </body>
+</html>

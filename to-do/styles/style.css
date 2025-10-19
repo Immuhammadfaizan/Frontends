@@ -1,0 +1,142 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(39, 89, 81, 0.696);
+    min-height: 100vh; /* ensures full vertical centering */
+}
+
+.section {
+    padding: 50px;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.col.rc-00 {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    height: auto;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.to-do-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.to-do-input .input {
+    width: 100%;
+    max-width: 400px;
+}
+
+.to-do-input .input input {
+    padding: 13px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 255, 0.694);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.edit-input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.add-btn {
+    padding: 14px 25px;
+    background-color: rgba(0, 0, 255, 0.694);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-btn span {
+    color: #f1f1f1;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.to-do-list {
+    margin: 50px 0px 0px 0px;
+}
+
+.data-col {
+    margin: 6px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 2px 10px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    background-color: rgba(138, 198, 219, 0.74);
+}
+
+.data-div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.data-div p {
+    color: rgba(0, 0, 0, 0.842);
+}
+
+.data-btns {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px;
+    background-color: rgb(4, 4, 190);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn i {
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+.del-btn {
+    background-color: rgb(223, 6, 6);
+}
+
+
+
+
+
+

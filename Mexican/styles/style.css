@@ -1,0 +1,1326 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--peach-accent);
+}
+
+:root {
+    --navbar-dark: #2a2a2a;
+    --navbar-maroon: #451728;
+    --navbar-text: #f5f5f5;
+    --peach-accent: #ffd6aa;
+}
+
+.col-1 {
+    width: 8.3333%;
+}
+
+.col-2 {
+    width: 16.6667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.3333%;
+}
+
+.col-5 {
+    width: 41.6667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.3333%;
+}
+
+.col-8 {
+    width: 66.6667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.3333%;
+}
+
+.col-11 {
+    width: 91.6667%;
+}
+
+.col-12 {
+    width: 101%;
+}
+
+/* header {
+    padding: 20px;
+} */
+
+.section {
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    height: auto;
+}
+
+footer {
+    padding: 20px;
+}
+
+/* ------- Start Styling */
+header {
+    background-color: var(--navbar-maroon);
+}
+
+.nav-cont {}
+
+.nav-row {
+    width: 100%;
+}
+
+.rc-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rc-01 ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.rc-01 ul a {
+    color: var(--peach-accent);
+}
+
+.rc-01 ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--peach-accent);
+}
+
+/* ------ Hero Section  */
+.hero-sect {
+    background-image: url('../images/hero-section.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-size: 100%;
+    padding: 50px 0px;
+}
+
+
+.rc-11 {
+    padding: 50px 0px;
+}
+
+.rc-11 img {
+    height: auto;
+    width: 100%;
+    max-width: 100px;
+}
+
+.rc-11 h1 {
+    font-size: 90px;
+    font-weight: bolder;
+    letter-spacing: normal;
+    color: var(--peach-accent);
+    line-height: 10px;
+}
+
+.rc-11 p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--peach-accent);
+    line-height: 30px;
+    padding: 14px 120px 10px 0px;
+}
+
+.rc-11 button {
+    padding: 13px 70px;
+    border-radius: 35px;
+    background-color: var(--peach-accent);
+    color: var(--navbar-maroon);
+    font-weight: 600;
+    letter-spacing: normal;
+    font-size: 15px;
+    border: none;
+}
+
+/* Menu Section  */
+.menu-sect {
+    padding: 50px 0px;
+    background-color: var(--peach-accent);
+}
+
+.rc-21 {
+    text-align: center;
+}
+
+.rc-21 h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 40px;
+}
+
+.rc-21 p {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 25px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.rc-21 button {
+    padding: 15px 80px;
+    border-radius: 35px;
+    background-color: var(--navbar-maroon);
+    color: var(--peach-accent);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
+.rc-22 {
+    padding: 60px 0px 0px;
+    height: auto;
+    width: 100%;
+}
+
+.rc-22 img {
+    height: auto;
+    width: 100%;
+}
+
+/* About Section  */
+.about-sect {
+    padding: 20px 0px 40px;
+}
+
+.about-row {
+    gap: 90px;
+}
+
+.rc-31 {
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.rc-31 img {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.rc-32 {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.rc-32 h1 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 40px;
+}
+
+.rc-32 p {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 25px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0px 40px 30px 0px;
+}
+
+.rc-32 button {
+    padding: 15px 80px;
+    border-radius: 35px;
+    background-color: var(--navbar-maroon);
+    color: var(--peach-accent);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
+/* TACOS SECTION  */
+.taco-sect {
+    padding: 50px 0px 330px;
+}
+
+.taco-cont {
+    display: block;
+    position: relative;
+}
+
+.rc-41 {
+    position: absolute;
+    padding: 60px 0px;
+    height: auto;
+    width: 100%;
+    text-align: right;
+    z-index: -1;
+}
+
+.rc-41 img {
+    height: auto;
+    width: 100%;
+    max-width: 850px;
+    margin: 0px auto;
+    padding-left: 30px;
+}
+
+.rc-42 {
+    display: block;
+    height: auto;
+    z-index: 1;
+}
+
+.rc-42 img {
+    height: auto;
+    margin: 0px auto;
+    top: 0;
+    left: 200px;
+    padding: 5px 0px 5px 30px;
+}
+
+/* OFFER SECTION  */
+.offer-sect {
+    padding: 60px 0px;
+    background-color: var(--navbar-maroon);
+}
+
+.rc-51 {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+.rc-51 h1 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: normal;
+    color: var(--peach-accent);
+    line-height: 40px;
+}
+
+.rc-51 p {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--peach-accent);
+    line-height: 25px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0px 40px 30px 0px;
+}
+
+.rc-51 button {
+    padding: 15px 80px;
+    border-radius: 35px;
+    background-color: var(--peach-accent);
+    color: var(--navbar-maroon);
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+}
+
+.rc-52 {
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 50px;
+    margin: auto;
+    /* animation: rotation 5s linear infinite; */
+}
+
+.rc-52 img {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* SECTION 6 */
+.sect-6 {
+    position: relative;
+    padding: 60px 0px;
+    background-image: url('../images/sec-last.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.sect-6::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(27, 8, 15, 0.7);
+    z-index: 2;
+}
+
+.rc-61 {
+    position: relative;
+    z-index: 3;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+
+.rc-61 img {
+    height: auto;
+    width: 100%;
+    max-width: 180px;
+}
+
+.rc-61 p {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: var(--peach-accent);
+    line-height: 30px;
+    width: 100%;
+    margin: auto;
+    padding: 35px 123px 30px;
+}
+
+.rc-61 h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--peach-accent);
+}
+
+/* SUB SECTION  */
+.sub-sect {
+    padding: 50px 0px;
+}
+
+.row-7 {
+    display: block;
+    padding: 60px 0px;
+}
+
+.rc-71 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.rc-71 h1 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 40px;
+}
+
+.rc-71 p {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: var(--navbar-maroon);
+    line-height: 30px;
+    margin: auto;
+    padding: 0px 123px 75px;
+}
+
+.input {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border-radius: 35px;
+    padding: 1px 50px 1px 0px;
+    background-color: var(--navbar-text);
+    margin: auto;
+}
+
+.input input {
+    float: left;
+    padding: 12px 90px;
+    border-radius: 35px;
+    border: none;
+    background-color: transparent;
+}
+
+.input button {
+    float: right;
+    padding: 15px 35px;
+    font-size: 16px;
+    background-color: var(--navbar-maroon);
+    color: var(--peach-accent);
+    border-radius: 35px;
+    border: none;
+    font-weight: 600;
+}
+
+
+/* Footer Section  */
+footer {
+    background-color: #5a1c33;
+    background-size: cover;
+    color: #ffd6aa;
+    padding: 100px 50px;
+}
+
+.row-8 {
+    display: flex;
+}
+
+.row-8 .col-6 h3 a {
+    font-size: 40px;
+    color: #ffd6aa;
+}
+
+.row-8 .col-6 p {
+    padding-right: 30px;
+}
+
+.row-8 .col-6 .social {
+    display: flex;
+    gap: 10px;
+}
+
+.row-8 .col-6 i {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #5a1c33;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-8 .col-6 i:hover {
+    color: #ffd6aa;
+    background-color: #5a1c33;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.row-8 .col-2 ul li {
+    list-style: none;
+    line-height: 30px;
+}
+
+.row-8 .col-2 ul li a {
+    color: #ffd6aa;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width:560px) {
+    footer {
+        padding-right: 100px 10px;
+    }
+
+    .row-8 {
+        flex-direction: column;
+        transition: 0.5;
+    }
+
+    .row-8 .col-2 {
+        width: 100%;
+    }
+}
+
+/* Responsive Section  */
+@media (max-width: 1140px) {
+    .rc-11 {
+        padding-left: 30px;
+    }
+
+    .rc-51 h1 {
+        font-size: 40px;
+    }
+
+    .rc-51 p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .rc-11 img {
+        max-width: 80px;
+    }
+
+    .rc-11 h1 {
+        font-size: 80px;
+    }
+
+    .rc-11 p {
+        font-size: 18px;
+        padding-right: 0;
+    }
+
+    .about-row {
+        gap: 50px;
+    }
+
+    .input {
+        width: 45%;
+    }
+}
+
+@media (max-width: 970px) {
+    .rc-11 img {
+        max-width: 75px;
+    }
+
+    .rc-11 h1 {
+        font-size: 75px;
+    }
+
+    .rc-11 p {
+        font-size: 17px;
+        padding-right: 0;
+    }
+
+    .about-row {
+        gap: 30px;
+    }
+
+    .rc-32 h1 {
+        font-size: 40px;
+    }
+
+    .rc-32 p {
+        font-size: 18px;
+    }
+
+    .taco-sect {
+        padding-bottom: 411px;
+    }
+
+    .rc-42 img {
+        height: 70px;
+    }
+
+    .rc-51 h1 {
+        font-size: 35px;
+    }
+
+    .rc-51 p {
+        font-size: 18px;
+    }
+
+    .rc-51 button {
+        padding: 14px 48px;
+    }
+
+    .rc-61 img {
+        max-width: 160px;
+    }
+
+    .rc-61 p {
+        font-size: 27px;
+        line-height: 27px;
+        padding: 35px 123px 30px;
+    }
+
+    .rc-61 h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 868px) {
+    .rc-11 img {
+        max-width: 60px;
+    }
+
+    .rc-11 h1 {
+        font-size: 70px;
+    }
+
+    .rc-11 p {
+        font-size: 17px;
+        padding-right: 0;
+    }
+
+    .about-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 60px 20px 120px;
+    }
+
+    .rc-31 img {
+        display: block;
+        filter: brightness(60%);
+        margin: 0 auto;
+    }
+
+    .rc-32 {
+        margin-top: -395px;
+        z-index: 1;
+    }
+
+    .rc-32 h1,
+    .rc-32 p {
+        color: var(--peach-accent);
+    }
+
+    .rc-32 button {
+        color: var(--navbar-maroon);
+        background-color: var(--peach-accent);
+        padding: 15px 40px;
+    }
+
+    .rc-71 h1 {
+        font-size: 47px;
+        line-height: 37px;
+    }
+
+    .rc-71 p {
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .input {
+        width: 50%;
+    }
+}
+
+@media (max-width: 810px) {
+    .rc-11 {
+        padding-top: 20px;
+    }
+
+    .rc-11 img {
+        max-width: 30px;
+    }
+
+    .rc-11 h1 {
+        font-size: 50px;
+    }
+
+    .rc-11 p {
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 0;
+    }
+
+    .rc-32 h1 {
+        font-size: 40px;
+        line-height: 20px;
+    }
+
+    .rc-32 p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .rc-32 button {
+        font-size: 13px;
+        padding: 12px 35px;
+    }
+
+    .taco-sect {
+        padding-bottom: 288px;
+    }
+
+    .rc-42 img {
+        height: 60px;
+    }
+
+    .rc-61 img {
+        max-width: 130px;
+    }
+
+    .rc-61 p {
+        font-size: 23px;
+        line-height: 24px;
+        padding: 35px 10px 28px;
+    }
+
+    .rc-61 h2 {
+        font-size: 28px;
+    }
+
+    .rc-71 h1 {
+        font-size: 45px;
+        line-height: 37px;
+    }
+
+    .rc-71 p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .input {
+        width: 40%;
+        padding: 0px 110px 0px 0px;
+    }
+
+    .input input {
+        padding: 0px 134px;
+        margin-right: -180px;
+    }
+
+    .input button {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 630px) {
+    .rc-11 img {
+        max-width: 40px;
+    }
+
+    .rc-11 h1 {
+        font-size: 35px;
+    }
+
+    .rc-11 p {
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 0;
+    }
+
+    .rc-11 button {
+        padding: 11px 50px;
+        font-size: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .rc-01 {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .rc-21 h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .rc-21 p {
+        font-size: 15px;
+        line-height: 20px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    .rc-21 button {
+        padding: 10px 60px;
+        font-size: 10px;
+    }
+
+    .about-row {
+        padding: 0px 0px 110px 0px;
+    }
+
+    .rc-31 img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .rc-32 h1 {
+        font-size: 30px;
+        line-height: 20px;
+    }
+
+    .rc-32 {
+        margin-top: -320px;
+    }
+
+    .rc-32 p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .rc-32 button {
+        font-size: 13px;
+        padding: 12px 35px;
+    }
+
+    .taco-sect {
+        padding-bottom: 246px;
+    }
+
+    .rc-42 img {
+        height: 53px;
+    }
+
+    .rc-51 h1 {
+        font-size: 30px;
+    }
+
+    .rc-51 p {
+        font-size: 15px;
+    }
+
+    .rc-51 button {
+        font-size: 12px;
+        padding: 12px 40px;
+    }
+
+    .rc-71 h1 {
+        font-size: 34px;
+    }
+
+    .rc-71 p {
+        font-size: 17px;
+        padding: 20px;
+    }
+
+    .input {
+        display: block;
+        background-color: none;
+        flex-direction: column;
+    }
+
+    .input input {
+        display: none;
+    }
+
+    .input button {
+        width: auto;
+        float: none;
+        padding: 10px 77px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 538px) {
+    .hero-sect {
+        padding: 20px 0px;
+    }
+
+    .rc-11 {
+        padding-top: 15px;
+    }
+
+    .rc-11 img {
+        max-width: 30px;
+    }
+
+    .rc-11 h1 {
+        font-size: 30px;
+        line-height: 0;
+    }
+
+    .rc-11 p {
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 0;
+    }
+
+    .rc-11 button {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .rc-01 {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .offer-row {
+        flex-direction: column;
+    }
+
+    .taco-sect {
+        padding-bottom: 162px;
+    }
+
+    .rc-42 img {
+        height: 38px;
+    }
+
+    .rc-61 img {
+        max-width: 120px;
+    }
+
+    .rc-61 p {
+        font-size: 17px;
+        line-height: 24px;
+        padding: 35px 18px 28px;
+    }
+
+    .rc-61 h2 {
+        font-size: 27px;
+    }
+
+    .input button {
+        padding: 10px 60px;
+    }
+}
+
+@media (max-width: 486px) {
+    .hero-sect {
+        padding: 30px 0px;
+    }
+
+    .rc-11 {
+        padding-top: 5px;
+        flex-grow: 12;
+    }
+
+    .rc-11 img {
+        max-width: 15px;
+        width: 100%;
+    }
+
+    .rc-11 h1 {
+        font-size: 25px;
+    }
+
+    .rc-11 p {
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 0;
+    }
+
+    .rc-11 button {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .rc-01 {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .rc-21 h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .rc-21 p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .rc-21 button {
+        padding: 10px 60px;
+        font-size: 10px;
+    }
+
+    .about-row {
+        padding: 0px 0px 20px 0px;
+    }
+
+    .rc-32 {
+        margin-top: -290px;
+    }
+
+    .rc-31 img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .rc-32 h1 {
+        font-size: 20px;
+        line-height: 15px;
+    }
+
+    .rc-32 p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .rc-32 button {
+        font-size: 12px;
+        padding: 10px 30px;
+    }
+
+    /* .rc-42 {
+            padding-bottom: 250px;
+        } */
+
+    .rc-42 img {
+        height: 40px;
+    }
+
+    .rc-61 img {
+        max-width: 80px;
+    }
+
+    .rc-61 p {
+        font-size: 15px;
+        line-height: 22px;
+        padding: 35px 30px 28px;
+    }
+
+    .rc-61 h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 364px) {
+    .hero-sect {
+        padding: 0;
+    }
+
+    .rc-11 {
+        padding-top: 15px;
+
+        flex-grow: 12;
+    }
+
+    .rc-11 img {
+        max-width: 10px;
+        width: 100%;
+    }
+
+    .rc-11 h1 {
+        font-size: 15px;
+    }
+
+    .rc-11 p {
+        font-size: 9px;
+        line-height: 15px;
+        padding-right: 90px;
+    }
+
+    .rc-11 button {
+        padding: 6px 20px;
+        font-size: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .rc-01 {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .rc-21 h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .rc-21 p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .rc-21 button {
+        padding: 10px 60px;
+        font-size: 10px;
+    }
+
+    .rc-31 img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .rc-32 {
+        margin-top: -262px;
+    }
+
+    .rc-32 h1 {
+        font-size: 20px;
+        line-height: 15px;
+    }
+
+    .rc-32 p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .rc-32 button {
+        font-size: 12px;
+        padding: 10px 25px;
+    }
+
+    .taco-sect {
+        padding-bottom: 152px;
+    }
+
+    .rc-42 img {
+        height: 33px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-sect {
+        padding: 0;
+    }
+
+    .rc-11 {
+        padding-top: 10px;
+        flex-grow: 12;
+    }
+
+    .rc-11 img {
+        max-width: 10px;
+        width: 100%;
+    }
+
+    .rc-11 h1 {
+        font-size: 15px;
+        line-height: 0;
+    }
+
+    .rc-11 p {
+        font-size: 7px;
+        line-height: 12px;
+        padding-right: 90px;
+    }
+
+    .rc-11 button {
+        padding: 6px 15px;
+        font-size: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .rc-01 {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .rc-21 h1 {
+        font-size: 20px;
+        line-height: 15px;
+    }
+
+    .rc-21 p {
+        font-size: 10px;
+        line-height: 8px;
+    }
+
+    .rc-21 button {
+        padding: 10px 60px;
+        font-size: 10px;
+    }
+
+    .rc-31 img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .rc-32 {
+        margin-top: -213px;
+    }
+
+    .rc-32 h1 {
+        font-size: 17px;
+        line-height: 13px;
+    }
+
+    .rc-32 p {
+        font-size: 9px;
+        line-height: 12px;
+        padding: 10px 0px;
+    }
+
+    .rc-32 button {
+        font-size: 9px;
+        padding: 5px 15px;
+    }
+
+    .taco-sect {
+        padding-bottom: 140px;
+    }
+
+    .rc-42 img {
+        height: 35px;
+    }
+}

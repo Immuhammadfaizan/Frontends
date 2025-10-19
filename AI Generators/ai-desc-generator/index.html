@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Description Generator</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body class="gradient-bg">
+    <main class="container">
+      <header class="header">
+        <div class="icon-circle">
+          <svg
+            class="icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+            />
+          </svg>
+        </div>
+        <h1>AI Description Generator</h1>
+        <p>Create compelling descriptions with Artificial Intelligence</p>
+      </header>
+
+      <section class="form-section">
+        <form id="descriptionForm">
+          <div class="form-group">
+            <label>Content Type</label>
+            <select id="contentType" required>
+              <option value="">Select content type...</option>
+              <option value="product">Product Description</option>
+              <option value="service">Service Description</option>
+              <option value="blog">Blog Post</option>
+              <option value="social">Social Media Post</option>
+              <option value="email">Email Campaign</option>
+              <option value="website">Website Copy</option>
+              <option value="ad">Advertisement</option>
+              <option value="press">Press Release</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Target Audience</label>
+            <select id="audience" required>
+              <option value="">Select target audience...</option>
+              <option value="general">General Public</option>
+              <option value="professionals">Business Professionals</option>
+              <option value="students">Students</option>
+              <option value="parents">Parents</option>
+              <option value="seniors">Seniors</option>
+              <option value="teens">Teenagers</option>
+              <option value="entrepreneurs">Entrepreneurs</option>
+              <option value="technical">Technical Audience</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Additional Information (optional)</label>
+            <textarea
+              id="additionalInfo"
+              rows="4"
+              placeholder="Add specific details, keywords, or requirements..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-generate">
+            Generate Description
+          </button>
+        </form>
+      </section>
+
+      <section id="resultsSection" class="hidden result-section">
+        <div class="result-card">
+
+          <div class="result-header">
+            <h2>Generated Description</h2>
+            <button id="copyBtn">Copy</button>
+          </div>
+
+          <div id="generatedText" class="generated-text">
+            Your generated content will appear here...
+          </div>
+
+          <button id="regenerateBtn" class="regen-btn">
+            Generate Another Version
+          </button>
+          
+        </div>
+      </section>
+
+      <div id="successMessage" class="success-msg hidden">
+        Description copied to clipboard!
+      </div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

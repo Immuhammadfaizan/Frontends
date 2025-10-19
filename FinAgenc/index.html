@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>FinAgenc</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand ps-3" href="#">
+                    <span>Fin</span><span class="blue">Agenc</span>
+                </a>
+
+                <!-- Toggle for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Blog Page</a></li>
+                                <li><a class="dropdown-item" href="#">Element Page</a></li>
+                                <li><a class="dropdown-item" href="#">404 Page</a></li>
+                                <li><a class="dropdown-item" href="#">Landing Page</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right side -->
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa fa-search fs-4" aria-hidden="true"></i>
+                        <a href="#" class="btn btn-warning">Start a Project</a>
+                        <i class="fa fa-moon-o fs-4" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section  -->
+    <section class="section">
+        <div class="container-fluid px-0">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Images/banner1.jpg" alt="Banner 1" class="d-block w-100" />
+                        <div class="carousel-caption">
+                            <p>Providing Brilliant Ideas For Your Business.</p>
+                            <h3>Your Idea Realized For The Real World.</h3>
+                            <button type="button" class="btn btn-primary mt-4">Read More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/banner2.jpg" alt="Banner 2" class="d-block w-100" />
+                        <div class="carousel-caption">
+                            <p>The Ideas That Make Customer Go Wow.</p>
+                            <h3>Sharing Your Company With The World.</h3>
+                            <button type="button" class="btn btn-primary mt-4">Read More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/banner3.jpg" alt="Banner 3" class="d-block w-100" />
+                        <div class="carousel-caption">
+                            <p>Providing Brilliant Ideas For Your Business.</p>
+                            <h3>Your Idea Realized For The Real World.</h3>
+                            <button type="button" class="btn btn-primary mt-4">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Studio Section  -->
+    <section class="section studio-sect">
+        <div class="container studio-cont">
+            <div class="row align-items-center">
+                <div class="col-md-5 col-sm-12 rc-21">
+                    <p>OUR STUDIO</p>
+                    <h2>Creative Approach</h2>
+                    <p class="mt-4">
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit,
+                        amet consectetur elit.
+                    </p>
+                    <p>
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit,
+                        amet consectetur elit.
+                    </p>
+                </div>
+
+                <div class="col-md-7 col-sm-12 rc-22">
+                    <p>HISTORY</p>
+                    <h2>
+                        Photographs Are To Memories <br />
+                        What Memory Is To Time.
+                    </h2>
+                    <p class="mt-4">
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit,
+                        amet consectetur elit.
+                    </p>
+                    <p>
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit,
+                        amet consectetur elit.
+                    </p>
+                    <button type="button" class="btn btn-primary mt-5">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Offer Section  -->
+    <section class="section offer-sect">
+        <div class="container offer-cont">
+            <div class="row offer-row align-items-center">
+                <div class="col-md-5 col-sm-12 rc-31">
+                    <p class="fw-semibold">WHAT WE OFFER</p>
+                    <h2>Building Brands More Quickly</h2>
+                </div>
+
+                <div class="col-md-7 col-sm-12 rc-32">
+                    <p>
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
+                        amet, consectetur elit. Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Offer Cards Section  -->
+    <section class="section">
+        <div class="container offer-cards">
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card offer-card text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">UX Design</h5>
+                            <p class="card-text mt-4">
+                                Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card offer-card active text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fa fa-bullhorn"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark">Marketing</h5>
+                            <p class="card-text text-white mt-4">
+                                Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card offer-card text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Web Development</h5>
+                            <p class="card-text mt-4">
+                                Lorem ipsum dolor sit amet, elit. Id ab commodi magnam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Work Section  -->
+    <section class="section work-sect">
+        <div class="container work-cont">
+            <div class="row work-row justify-content-center">
+
+                <!-- Section title -->
+                <div class="col-12 text-center mb-5 rc-41">
+                    <span>OUR WORKS</span>
+                    <h2>What We Do</h2>
+                </div>
+
+                <!-- Work item -->
+                <div class="row align-items-center rc-42">
+                    <!-- Image -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 img-42 mb-4 mb-md-0">
+                        <img src="./Images/g1.jpg" alt="G1" class="img-fluid rounded">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 cont-42">
+                        <div class="in-42">
+                            <span>UI/UX DESIGN</span>
+                            <h2>
+                                The ideas that are not<br />
+                                afraid to be different.
+                            </h2>
+                            <p>
+                                Lorem ipsum viverra feugiat. Pellen tesque libero <br />
+                                ut justo, ultrices in ligula tempufddfel.
+                            </p>
+                            <div>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Dev Section  -->
+    <section class="section dev-sect">
+        <div class="container dev-cont">
+            <div class="row dev-row justify-content-center">
+
+                <!-- Work item -->
+                <div class="row align-items-center rc-51">
+
+                    <!-- Content -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 cont-51 mb-4 mb-md-0">
+                        <div class="in-51">
+                            <span>WEB DEVELOPMENT</span>
+                            <h2>The ideas that are not afraid to be different.</h2>
+                            <p>
+                                Lorem ipsum viverra feugiat. Pellen tesque libero
+                                ut justo, ultrices in ligula tempufddfel.
+                            </p>
+                            <div>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 img-51">
+                        <img src="./Images/g4.jpg" alt="G4" class="img-fluid rounded">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Market Section  -->
+    <section class="section mart-sect">
+        <div class="container mart-cont">
+            <div class="row mart-row align-items-center">
+
+                <!-- Image column -->
+                <div class="col-md-6 col-sm-12 img-61">
+                    <img src="./Images/g3.jpg" alt="G3" class="img-fluid">
+                </div>
+
+                <!-- Content column -->
+                <div class="col-md-6 col-sm-12 rc-61">
+                    <div class="in-42">
+                        <span>MARKETING</span>
+                        <h2>The ideas that are not afraid to be different.</h2>
+                        <p>
+                            Lorem ipsum viverra feugiat. Pellen tesque libero
+                            ut justo, ultrices in ligula tempufddfel.
+                        </p>
+                        <div>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonial Section  -->
+    <section class="section test-sect">
+        <div class="container test-cont">
+            <h6 class="text-center">OUR UPDATES</h6>
+            <h2 class="text-center mb-4">Latest News</h2>
+
+            <div class="row justify-content-center test-row">
+                <div class="col-md-10">
+                    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+                        <!-- Dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="card flex-md-row flex-column align-items-center p-3">
+                                    <img src="./Images/team1.jpg" class="img-fluid rounded mb-3 mb-md-0 me-md-3"
+                                        alt="person-1" style="max-width: 180px;">
+                                    <div class="card-body">
+                                        <p class="card-text text-dark">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                            mollitia quasi inventore reiciendis quisquam saepe veniam eius eligendi.
+                                        </p>
+                                        <h5 class="card-title fw-bold text-dark mb-0">John Wilson</h5>
+                                        <p class="fs-6 text-muted">City Name</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="card flex-md-row flex-column align-items-center p-3">
+                                    <img src="./Images/team2.jpg" class="img-fluid rounded mb-3 mb-md-0 me-md-3"
+                                        alt="person-2" style="max-width: 180px;">
+                                    <div class="card-body">
+                                        <p class="card-text text-dark">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi architecto
+                                            assumenda voluptate porro illum illo iure eveniet minima magni error.
+                                        </p>
+                                        <h5 class="card-title fw-bold text-dark mb-0">Sarah Johnson</h5>
+                                        <p class="fs-6 text-muted">City Name</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="card flex-md-row flex-column align-items-center p-3">
+                                    <img src="./Images/team3.jpg" class="img-fluid rounded mb-3 mb-md-0 me-md-3"
+                                        alt="person-3" style="max-width: 180px;">
+                                    <div class="card-body">
+                                        <p class="card-text text-dark">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci magnam
+                                            vero vitae, commodi ex ab, assumenda debitis quo.
+                                        </p>
+                                        <h5 class="card-title fw-bold text-dark mb-0">Michael Lee</h5>
+                                        <p class="fs-6 text-muted">City Name</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Prev/Next Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reveal Section  -->
+    <section class="section rev-sect">
+        <div class="container rev-cont">
+            <div class="row rev-row align-items-center">
+
+                <!-- Video Column -->
+                <div class="col-md-6 col-sm-12 rc-71 mb-4 mb-md-0">
+                    <div class="video-wrapper position-relative">
+                        <video id="myVideo" class="w-100 rounded" controls poster="">
+                            <source src="../../../../projectBhaiSahab(editing)/vidzzz/morning cycle. _ episode 09(720P_HD).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <!-- Play button (if you want custom play trigger instead of default controls) -->
+                        <div class="play-btn d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle"
+                            id="playBtn">
+                            <i class="fa fa-play fa-2x text-blue"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-md-6 col-sm-12 rc-72">
+                    <span class="d-block text-uppercase fw-semibold mb-2">
+                        REVEALING WHAT IS POSSIBLE
+                    </span>
+                    <h2 class="mb-3">
+                        Fresh Ideas, Refreshing Communication
+                    </h2>
+                    <p>
+                        Lorem ipsum viverra feugiat. Pellentesque libero ut justo, ultrices in ligula.
+                        Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur ante ipsum elit.
+                    </p>
+                    <p>
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        Nulla mollis dapibus nunc.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-3">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Together Section  -->
+    <section class="section toget-sect">
+        <div class="container toget-cont">
+            <div class="row g-4 align-items-center text-center text-md-start">
+
+                <!-- Left Column -->
+                <div class="col-md-8 col-sm-12 rc-91">
+                    <span class="d-block text-uppercase fw-semibold mb-2">
+                        LET'S WORK TOGETHER
+                    </span>
+                    <h2>
+                        Have An Idea? Let’s Get It Done Right!
+                    </h2>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-md-4 col-sm-12 rc-92 text-md-end">
+                    <a href="#" class="btn btn-primary">
+                        Let's Work Together
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-5">
+        <div class="container foot-cont">
+
+            <!-- Top Row -->
+            <div class="row foot-row1 align-items-center mb-4">
+                <div class="col-md-6 col-sm-12 rc-101 text-center text-md-start mb-3 mb-md-0">
+                    <a class="foot-brand fw-bold fs-3 text-decoration-none" href="#">
+                        <span>Fin</span><span class="blue">Agenc</span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12 rc-102 text-center text-md-end">
+                    <h1 class="fs-4 fw-semibold">
+                        Let's Start Work With FinAgenc Today
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Middle Row -->
+            <div class="row foot-row2 mt-5 pt-4 mb-5 gy-4">
+
+                <!-- Phone & Address -->
+                <div class="col-md-4 col-sm-12 rc-111">
+                    <h2 class="h5 fw-bold">Phone</h2>
+                    <p class="pb-3">+(21) 255 088 4943</p>
+                    <h2 class="h5 fw-bold">Address</h2>
+                    <p>FinAgenc, Honey Street, Main Road London, UK - 49436.</p>
+                </div>
+
+                <!-- Support & Social -->
+                <div class="col-md-4 col-sm-12 rc-112">
+                    <h2 class="h5 fw-bold">Support</h2>
+                    <p class="pb-3">
+                        <a href="mailto:FinAgenc@mail.com" class="text-decoration-none">
+                            FinAgenc@mail.com
+                        </a>
+                    </p>
+                    <h2 class="h5 fw-bold">Follow</h2>
+                    <div class="social d-flex gap-3 fs-5">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-4 col-sm-12 rc-113">
+                    <h2 class="h5 fw-bold">Newsletter</h2>
+                    <form class="d-flex gap-2 pb-3">
+                        <input type="email" class="form-control" placeholder="Email Address" required>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p>Subscribe to our mailing list and get updates to your inbox.</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="row foot-row3 border-top pt-3">
+                <div class="col-12 rc-121 text-center">
+                    <p class="mb-0 small">
+                        © 2025 FinAgenc. All Rights Reserved | WordPress Theme by W3Layouts.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./scripts/js/bootstrap.min.js"></script>
+</body>
+
+</html>

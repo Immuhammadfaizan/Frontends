@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>AI Title Generator</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <h1>AI Title Generator</h1>
+
+                    <p>Generate SEO-optimized titles that rank and convert</p>
+                </div>
+                <div class="form-container">
+                    <form id="seoForm">
+                        <div class="form-row">
+
+                            <!-- CATEGORY -->
+                            <div class="form-group">
+                                <label>Category</label>
+                                <div class="select" id="categorySelect">
+                                    <div><span id="selectedCategory">Select Category</span></div>
+                                    <div><span class="angle-down"><i class="fa fa-angle-down"></i></span></div>
+                                </div>
+                                <div class="dropdown-list" id="categoryList">
+                                    <div><span>Technology</span></div>
+                                    <div><span>Business</span></div>
+                                    <div><span>Health & Wellness</span></div>
+                                    <div><span>Lifestyle</span></div>
+                                    <div><span>Education</span></div>
+                                    <div><span>Finance</span></div>
+                                    <div><span>Travel</span></div>
+                                    <div><span>Food & Cooking</span></div>
+                                    <div><span>Marketing</span></div>
+                                </div>
+                            </div>
+
+                            <!-- NICHE -->
+                            <div class="form-group">
+                                <label>Niche</label>
+                                <input type="text" id="niche" placeholder="e.g., AI tools, productivity apps" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- AUDIENCE -->
+                            <div class="form-group">
+                                <label>Target Audience</label>
+                                <div class="select" id="audienceSelect">
+                                    <div><span id="selectedAudience">Select Audience</span></div>
+                                    <div><span class="angle-down"><i class="fa fa-angle-down"></i></span></div>
+                                </div>
+                                <div class="dropdown-list" id="audienceList">
+                                    <div><span>Beginners</span></div>
+                                    <div><span>Professionals</span></div>
+                                    <div><span>Entrepreneurs</span></div>
+                                    <div><span>Students</span></div>
+                                    <div><span>General Public</span></div>
+                                </div>
+                            </div>
+
+                            <!-- CONTENT TYPE -->
+                            <div class="form-group">
+                                <label>Content Type</label>
+                                <div class="select" id="contentSelect">
+                                    <div><span id="selectedContent">Select Content Type</span></div>
+                                    <div><span class="angle-down"><i class="fa fa-angle-down"></i></span></div>
+                                </div>
+                                <div class="dropdown-list" id="contentList">
+                                    <div><span>Blog Post</span></div>
+                                    <div><span>Article</span></div>
+                                    <div><span>How-to Guide</span></div>
+                                    <div><span>Review</span></div>
+                                    <div><span>Listicle</span></div>
+                                    <div><span>Tutorial</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KEYWORDS -->
+                        <div class="form-group">
+                            <label>Primary Keywords</label>
+                            <input type="text" id="keywords" placeholder="Enter main keywords (comma separated)"
+                                required>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <div class="btn-generate" id="generateBtn">
+                            <span>Generate SEO Title</span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
